@@ -245,10 +245,10 @@ const PaymentForm = () => {
             <RadioButton
               setselected={setstatedata}
               selected={statedata}
-              value={mobileDevice ? "abapay_khqr_deeplink" : "abapay_khqr"}
+              value={"abapay_khqr"}
             />
             <Paymentoptioncard
-              type={mobileDevice ? "abapay_khqr_deeplink" : "abapay_khqr"}
+              type={"abapay_khqr"}
               name={"ABA KHQR"}
               id={"payment_option"}
               setselected={setstatedata}
