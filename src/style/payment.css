@@ -1,0 +1,4 @@
+.payment_container .payment_element .amount_textfield .numberinput::-webkit-inner-spin-button , .payment_container .payment_element .amount_textfield .numberinput::-webkit-outer-spin-button  {
+    -webkit-appearance: none;
+   
+}
