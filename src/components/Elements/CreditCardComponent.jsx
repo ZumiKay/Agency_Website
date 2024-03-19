@@ -143,18 +143,18 @@ const PaymentForm = () => {
     if (request.data) {
       setdatapost(request.data?.data);
 
-      // const checkforstatus = await Apirequest(
-      //   "/api/v1/updatetransaction",
-      //   "POST",
-      //   {
-      //     tranid: request?.data?.data?.tran_id,
-      //   }
-      // );
+      const checkforstatus = await Apirequest(
+        "/api/v1/updatetransaction",
+        "POST",
+        {
+          tranid: request?.data?.data?.tran_id,
+        }
+      );
 
-      // if (!checkforstatus.success) {
-      //   errorToast(checkforstatus.message);
-      //   return;
-      // }
+      if (!checkforstatus.success) {
+        errorToast(checkforstatus.message);
+        return;
+      }
     }
   };
   useEffect(() => {
