@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Apirequest, isMobileDevice } from "../util";
+import { Apirequest } from "../util";
 import { SecondaryButton } from "../Buttons/FullButton";
 
 import ResponsiveDialog, { errorToast } from "./Modals";
@@ -22,7 +22,6 @@ const stateInitialize = {
 let toasted = false;
 
 const PaymentForm = () => {
-  const mobileDevice = isMobileDevice();
   const [openmodal, setopenmodal] = useState(false);
   const [message, setmessage] = useState(null);
   const [wscreen, setwscreen] = useState(window.innerWidth);
@@ -214,8 +213,8 @@ const PaymentForm = () => {
               placeholder="Amount(USD)"
               value={statedata.amount ? statedata.amount : ""}
               name="amount"
-              disabled={tranId ? true : false}
               onChange={handleInputChange}
+              readOnly={tranId ? true : false}
               style={{
                 minWidth: "260px",
                 borderRadius: "10px",
