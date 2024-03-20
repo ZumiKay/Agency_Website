@@ -151,10 +151,6 @@ const PaymentForm = () => {
       );
 
       if (!checkforstatus.success) {
-        if (checkforstatus.status === 524) {
-          return;
-        }
-        errorToast(checkforstatus.message);
         return;
       }
     }
