@@ -7,17 +7,17 @@ import "./style/index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { NotFound } from "./components/Sections/Error";
 import PaymentPage from "./screens/Payment";
-import ComingSoon from "./components/Elements/ComingSoon";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <ComingSoon />,
+    element: <App />,
     errorElement: <NotFound />,
   },
   {
